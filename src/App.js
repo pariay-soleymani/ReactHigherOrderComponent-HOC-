@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Cars />
-      <Bus />
+      <Bus tires={4} />
     </>
   );
 }

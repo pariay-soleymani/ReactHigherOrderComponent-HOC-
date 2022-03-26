@@ -1,7 +1,7 @@
 import { number } from "prop-types";
 import React, { Component } from "react";
 
-const withCounter = OldComponent => {
+const withCounter = (OldComponent, step) => {
   class NewComponent extends Component {
     constructor() {
       super();
@@ -12,13 +12,13 @@ const withCounter = OldComponent => {
 
     ClickHandler = () => {
       this.setState((prevState) => ({
-        number: prevState.number + 1,
+        number: prevState.number + step,
       }));
     };
 
     render() {
       return (
-        <OldComponent ClickHandler={this.ClickHandler} number={this.state.number} />
+        <OldComponent ClickHandler={this.ClickHandler} number={this.state.number} {...this.props}/>
       );
     }
   }

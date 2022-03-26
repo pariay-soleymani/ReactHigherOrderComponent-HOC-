@@ -7,7 +7,7 @@ class Cars extends Component {
       <div>
         <button type="button" onClick={ClickHandler}>
           {" "}
-          car plus one
+          car plus five
         </button>
         <p>Number of cars : {number}</p>
       </div>
@@ -15,4 +15,4 @@ class Cars extends Component {
   }
 }
 
-export default HOCComponent(Cars);
+export default HOCComponent(Cars , 5);
